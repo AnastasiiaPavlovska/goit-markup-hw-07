@@ -1,0 +1,21 @@
+:root {
+    --font-weight-h: 500;
+    --font-weight-hh: 700;
+    --font-size-h: 20px;
+    --font-size-hh: 36px;
+    --line-height-hh: 1.1;
+    --line-height-h: 1.2;
+    --line-height-p: 1.5;
+    --letter-spacing-h: 0.04em;
+    --letter-spacing-p: 0.02em;
+    --text-color: #434455;
+    --hero-color: #2e2f42;
+    --links-color: #4d5ae5;
+    --hover-color: #404bbf;
+    --magic-color: #ffffff;
+    --accent-color: #e7e9fc;
+    --background-color: #f4f4fd;
+    --dairy: #fcfcfc;
+    --green: #31d0aa;
+    --light-slate: #8e8f99;
+}

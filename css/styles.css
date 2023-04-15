@@ -1,0 +1,26 @@
+@import './config.css';
+@import './header.css';
+@import './footer.css';
+@import './studio.css';
+@import './portfolio.css';
+@import './backdrop-order.css';
+
+/* Common */
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    background: #e5e5e5;
+    color: var(--hero-color);
+}
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+main {
+    background-color: var(--magic-color);
+}
