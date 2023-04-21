@@ -4,14 +4,14 @@
 
 .hero {
     max-width: 1440px;
-    height: 600px;
     margin: 0 auto;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 112px;
+    padding-bottom: 112px;
     text-align: center;
-    background-color: var(--hero-color);
+    background-color: var(--navy-blue);
     background-image: linear-gradient( to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office.jpg");
     background-position: center;
+    background-size: cover;
 }
 
 .hero-text {
