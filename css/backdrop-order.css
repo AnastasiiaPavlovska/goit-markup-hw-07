@@ -3,14 +3,16 @@
 /* backdrop & modal */
 
 .backdrop {
+    display: block;
+    overflow-y: scroll;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 1;
+    padding-top: 96px;
     background-color: rgba(46, 47, 66, 0.4);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: display 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -23,9 +25,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 408px;
-    height: 576px;
-    background-color: #fcfcfc;
+    background-color: var(--dairy);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
@@ -39,25 +39,24 @@
     align-items: center;
     width: 24px;
     height: 24px;
-    background-color: var(--accent-color);
+    background: var(--cornflower);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 }
 
 .close-icon {
-    fill: var(--hero-color);
+    fill: var(--navy-blue);
 }
 
 .close:hover,
 .close:focus {
-    background-color: #404bbf;
+    background-color: var(--ocean);
 }
 
 .close:hover .close-icon,
 .close:active .close-icon {
-    fill: var(--magic-color);
+    fill: var(--white);
 }
 
 
@@ -72,11 +71,13 @@
     display: block;
     margin: 0;
     padding-top: 72px;
+    padding-left: 16px;
+    padding-right: 16px;
     text-align: center;
     font-weight: var(--font-weight-h);
     line-height: var(--line-height-p);
     letter-spacing: var(--letter-spacing-p);
-    color: var( --hero-color);
+    color: var( --navy-blue);
 }
 
 .form-field {
@@ -90,17 +91,10 @@
 }
 
 .form-label {
-    width: 54px;
-    height: 14px;
-    left: 0px;
-    top: 198px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 1.17;
     letter-spacing: 0.01em;
-    color: #8E8F99;
+    color: var(--light-slate);
 }
 
 .form-field input {
@@ -117,7 +111,7 @@
     position: absolute;
     top: 26px;
     left: 16px;
-    fill: var(--hero-color);
+    fill: var(--navy-blue);
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -144,13 +138,16 @@ textarea::placeholder {
 .form-input:hover,
 .form-input:focus {
     outline: 0;
-    border: 1px solid var(--links-color);
+    border: 1px solid var(--iris);
 }
 
 .form-input:hover~.form-icon,
 .form-input:focus~.form-icon {
-    fill: var(--links-color);
+    fill: var(--iris);
 }
+
+
+/* checkbox  */
 
 .form-check {
     display: flex;
@@ -158,18 +155,16 @@ textarea::placeholder {
     margin-top: 16px;
 }
 
-
-/* checkbox  */
-
 .checkbox {
     position: relative;
+    appearance: none;
     width: 16px;
     height: 16px;
     margin-right: 8px;
-    background-color: var(--magic-color);
+    background-color: var(--white);
     background-image: url("../images/vector.svg");
     background-position: center;
-    border: 1px solid var(--hero-color);
+    border: 1px solid var(--navy-blue);
     border-radius: 2px;
     cursor: pointer;
     transition-property: background-color;
@@ -180,7 +175,13 @@ textarea::placeholder {
 .checkbox:hover,
 .checkbox:focus {
     outline: 0;
-    border: 1px solid var(--hero-color);
+    border: 1px solid var(--navy-blue);
+}
+
+.checkbox:checked {
+    appearance: none;
+    background-color: var(--ocean);
+    border: 1px solid var(--ocean);
 }
 
 .check-label {
@@ -205,7 +206,7 @@ textarea::placeholder {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: var(--letter-spacing-h);
-    color: var(--hover-color);
+    color: var(--ocean);
 }
 
 
@@ -219,14 +220,15 @@ textarea::placeholder {
 
 .form-button-text {
     margin-top: 24px;
+    margin-bottom: 24px;
     width: 169px;
     height: 56px;
     cursor: pointer;
     font-weight: var(--font-weight-h);
     line-height: var(--line-height-p);
     letter-spacing: var(--letter-spacing-h);
-    color: var(--magic-color);
-    background-color: var(--links-color);
+    color: var(--white);
+    background-color: var(--iris);
     border-radius: 4px;
     border: 0;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -234,6 +236,6 @@ textarea::placeholder {
 
 .form-button-text:hover,
 .form-button-text:focus {
-    background-color: var(--hover-color);
+    background-color: var(--ocean);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
