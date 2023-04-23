@@ -76,3 +76,167 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 428px;
+    }
+    .header {
+        height: 70px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-top {
+        z-index: 1;
+    }
+    .nav-list.menu,
+    .address-list.menu {
+        display: none;
+    }
+    .menu-open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        stroke: var(--navy-blue);
+        background-color: var(--white);
+    }
+    .mobile-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 80px;
+        padding-left: 40px;
+        padding-right: 15px;
+        padding-bottom: 40px;
+        display: none;
+        font-weight: var(--font-weight-h);
+        line-height: var(--line-height-p);
+        letter-spacing: var(--letter-spacing-p);
+        color: var(--navy-blue);
+        background-color: var(--white);
+        text-decoration: none;
+        transition-property: opacity;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .mobile-menu.is-open {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        height: 100%;
+    }
+    .menu-close {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: rgba(231, 233, 252, 0.1);
+        border: 1px solid rgba(46, 47, 66, 0.1);
+    }
+    .nav-item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .nav-list {
+        margin-bottom: auto;
+    }
+    .nav-text {
+        font-weight: var(--font-weight-hh);
+        font-size: var(--font-size-hh);
+        line-height: var(--line-height-hh);
+        letter-spacing: var(--letter-spacing-p);
+        color: var(--navy-blue);
+        text-transform: capitalize;
+    }
+    .сontacts {
+        color: var(--ocean);
+    }
+    .contacts-container {
+        width: 100%;
+        padding-right: 25px;
+    }
+    .nav-text:hover {
+        color: var(--ocean);
+    }
+    .address-item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .address-text {
+        font-weight: var(--font-weight-h);
+        font-size: var(--font-size-h);
+        line-height: var(--line-height-h);
+        letter-spacing: var(--letter-spacing-p);
+        color: var(--slate);
+    }
+    .number {
+        font-weight: var(--font-weight-hh);
+        font-size: var(--font-size-hh);
+        line-height: var(--line-height-hh);
+        letter-spacing: var(--letter-spacing-p);
+        text-transform: capitalize;
+        color: var(--iris);
+    }
+    .top-network-list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 328px;
+        margin-top: 48px;
+    }
+    .top-network-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        border-radius: 50%;
+        background-color: var(--iris);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        width: 768px;
+    }
+    .header {
+        height: 72px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    }
+    .menu-open,
+    .mobile-menu {
+        display: none;
+    }
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        width: 261px;
+    }
+    .studio::after,
+    .portfolio::after {
+        top: 44px;
+    }
+    .address-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .address-text {
+        font-size: 12px;
+        line-height: var(--line-height-h);
+        letter-spacing: var(--letter-spacing-h);
+    }
+}

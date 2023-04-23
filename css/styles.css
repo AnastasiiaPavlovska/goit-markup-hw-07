@@ -1,27 +1,34 @@
-@import './config.css';
-@import './header.css';
-@import './footer.css';
-@import './studio.css';
-@import './portfolio.css';
-@import './backdrop-order.css';
-
-/* Common */
-
-body {
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    background: #e5e5e5;
-    color: var(--navy-blue);
-}
-
-.container {
-    width: 1158px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-main {
-    background-color: var(--white);
-}
+  @import './config.css';
+  @import './header.css';
+  @import './footer.css';
+  @import './studio.css';
+  @import './portfolio.css';
+  @import './backdrop-order.css';
+  /* Common */
+  
+  body {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      background: #e5e5e5;
+      color: var(--navy-blue);
+  }
+  
+  .container {
+      width: 1158px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  
+  main {
+      background-color: var(--white);
+  }
+  
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+      .hero {
+          background-image: linear-gradient( to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office\ 1@2x.jpg");
+      }
+  }
